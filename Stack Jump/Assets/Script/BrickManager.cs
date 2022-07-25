@@ -26,38 +26,18 @@ public class BrickManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (layer == 7)
-        {
-            _bricks[layer].SetActive(false);
-            layer = 0;
-
-        }
-        else
-        {
-
-
-           /* if (_bricks[layer].GetComponent<MoveBrick>().triger2)
-            {
-                raiseY += 0.436f;
-
-                // _bricks[layer + 1].GetComponent<MoveBrick>().beforeY = raiseY;
-                _bricks[layer].SetActive(false);
-                _bricks[layer + 1].SetActive(true);
-                _bricks[layer].GetComponent<MoveBrick>().triger2 = false; // 재사용을 위해 false로 돌려둔다.
-                layer++;
-
-            }*/
-        }
 
     }
 
 
 
+    // 그... 얘는 MoveBrick에서 부딪힐 때마다 불려짐
     public void ShowNextBrick()
     {
-        raiseY += 0.44f;
-        layer++;
-        _bricks[layer].GetComponent<MoveBrick>().beforeY = raiseY;
-        _bricks[layer].SetActive(true);
+            raiseY += 0.44f;
+            layer = (layer + 1) % 7;
+            _bricks[layer ].GetComponent<MoveBrick>().beforeY = raiseY;
+            _bricks[layer].SetActive(true);
+
     }
 }
