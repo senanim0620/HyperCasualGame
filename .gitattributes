@@ -1,0 +1,7 @@
+Stack filter=lfs diff=lfs merge=lfs -text
+Shotgun[[:space:]]King/Assets/Artifacts/81/81951999ffa8f4ab1aba09d0a220c7bf filter=lfs diff=lfs merge=lfs -text
+Shotgun[[:space:]]King/Library/Artifacts/81/81951999ffa8f4ab1aba09d0a220c7bf filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+Jump/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+***.exe filter=lfs diff=lfs merge=lfs -text
